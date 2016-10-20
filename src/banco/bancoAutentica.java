@@ -65,6 +65,12 @@ public class bancoAutentica extends javax.swing.JFrame {
             }
         });
 
+        txtSenha.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtSenhaActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -143,6 +149,10 @@ public class bancoAutentica extends javax.swing.JFrame {
 //                              verificar se tem resultado com o login e senha
 //                                      se tiver resultado login ok senão falha de login
     }//GEN-LAST:event_btnLoginActionPerformed
+
+    private void txtSenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSenhaActionPerformed
+        btnLoginActionPerformed(evt);
+    }//GEN-LAST:event_txtSenhaActionPerformed
 
     /**
      * @param args the command line arguments
