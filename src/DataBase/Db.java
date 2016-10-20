@@ -1,29 +1,48 @@
 package DataBase;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class Db {
 
     private Connection conexao;
     private Statement statement;
-    public PreparedStatement preStatement;
+    public PreparedStatement pst;
 
-    //--------------------------------------------------------------------------
-    public void open() throws ClassNotFoundException, SQLException {
-        String driver;
-        String url;
-        String usuario;
-        String senha;
+    String url = "jdbc:mysql://localhost:3306/";
+    String usuario = "root";
+    String senha = "2429";
+    String unicode = "?useUnicode=yes&characterEncoding=UTF-8";
 
-        driver = "com.mysql.fabric.jdbc.FabricMySQLDriver";
-        url = "jdbc:mysql://172.17.22.65:3306/VALTER";
-        usuario = "unicuritiba";
-        senha = "unicuritiba";
+    public Connection open() throws SQLException {
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            conexao = DriverManager.getConnection(url, usuario, senha);
 
-        DriverManager.registerDriver(new com.mysql.jdbc.Driver());
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(Db.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return conexao;
+    }
 
-        this.conexao = DriverManager.getConnection(url, usuario, senha);
-        this.statement = conexao.createStatement();
+    public Connection getConnection() {
+
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            conexao = DriverManager.getConnection(url + "valter_banco" + unicode, usuario, senha);
+
+        } catch (ClassNotFoundException | SQLException ex) {
+//            Logger.getLogger(DBConnection.class.getName()).log(Level.SEVERE, null, ex);
+            System.out.println("Too Many Connections");
+        }
+
+        return conexao;
     }
 
     //--------------------------------------------------------------------------
@@ -42,7 +61,6 @@ public class Db {
         }
     }
 
-    //--------------------------------------------------------------------------
     public ResultSet query(String sql, int tipo) throws ClassNotFoundException, SQLException {
 
         if (this.conexao == null || this.statement == null) {
@@ -67,14 +85,14 @@ public class Db {
             open();
         }
 
-        this.preStatement = this.conexao.prepareStatement(sql);
+        this.pst = this.conexao.prepareStatement(sql);
 
     }
 
     //--------------------------------------------------------------------------
     public PreparedStatement setQueryParameter() {
 
-        return this.preStatement;
+        return this.pst;
 
     }
 
