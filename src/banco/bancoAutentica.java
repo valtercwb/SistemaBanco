@@ -6,7 +6,7 @@
 package banco;
 
 import javax.swing.JOptionPane;
-import usuario.Usuario;
+import model.Usuario;
 
 /**
  *
@@ -19,6 +19,7 @@ public class bancoAutentica extends javax.swing.JFrame {
      */
     public bancoAutentica() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -35,10 +36,12 @@ public class bancoAutentica extends javax.swing.JFrame {
         btnLogin = new javax.swing.JButton();
         btnCancela = new javax.swing.JButton();
         txtSenha = new javax.swing.JPasswordField();
+        criarConta = new javax.swing.JLabel();
+        criarConta1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabelLogin.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jLabelLogin.setFont(new java.awt.Font("Candara", 0, 24)); // NOI18N
         jLabelLogin.setText("LOGIN");
 
         txLogin.addActionListener(new java.awt.event.ActionListener() {
@@ -71,52 +74,89 @@ public class bancoAutentica extends javax.swing.JFrame {
             }
         });
 
+        criarConta.setFont(new java.awt.Font("Candara", 0, 14)); // NOI18N
+        criarConta.setForeground(new java.awt.Color(0, 0, 255));
+        criarConta.setText("Criar Conta de Usuario");
+        criarConta.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                criarContaMouseDragged(evt);
+            }
+        });
+        criarConta.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                criarContaMouseClicked(evt);
+            }
+        });
+
+        criarConta1.setFont(new java.awt.Font("Candara", 0, 14)); // NOI18N
+        criarConta1.setForeground(new java.awt.Color(0, 0, 255));
+        criarConta1.setText("Ajuda");
+        criarConta1.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                criarConta1MouseDragged(evt);
+            }
+        });
+        criarConta1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                criarConta1MouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(397, 397, 397)
-                .addComponent(btnLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(28, 28, 28)
-                .addComponent(btnCancela)
-                .addContainerGap(400, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(343, 343, 343)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(216, 216, 216)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabelusuario)
-                    .addComponent(jLabelSenha))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(txLogin, javax.swing.GroupLayout.DEFAULT_SIZE, 228, Short.MAX_VALUE)
-                    .addComponent(txtSenha))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jLabelLogin)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabelusuario)
+                            .addComponent(jLabelSenha))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(txtSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(btnLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(btnCancela, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(txLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(criarConta)
+                                .addGap(50, 50, 50))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(jLabelLogin)
+                                .addGap(85, 85, 85))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(criarConta1)
+                                .addGap(101, 101, 101)))))
+                .addContainerGap(244, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(196, Short.MAX_VALUE)
+                .addContainerGap(200, Short.MAX_VALUE)
                 .addComponent(jLabelLogin)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(32, 32, 32)
-                        .addComponent(jLabelusuario))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(txLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelusuario))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabelSenha)
-                    .addComponent(txtSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(79, 79, 79)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnLogin)
-                    .addComponent(btnCancela))
-                .addGap(226, 226, 226))
+                    .addComponent(txtSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelSenha))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnCancela)
+                    .addComponent(btnLogin))
+                .addGap(18, 18, 18)
+                .addComponent(criarConta)
+                .addGap(18, 18, 18)
+                .addComponent(criarConta1)
+                .addGap(65, 65, 65))
         );
 
         pack();
@@ -153,6 +193,23 @@ public class bancoAutentica extends javax.swing.JFrame {
     private void txtSenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSenhaActionPerformed
         btnLoginActionPerformed(evt);
     }//GEN-LAST:event_txtSenhaActionPerformed
+
+    private void criarContaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_criarContaMouseClicked
+        this.setVisible(false);
+            new CriarConta().setVisible(true);
+    }//GEN-LAST:event_criarContaMouseClicked
+
+    private void criarContaMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_criarContaMouseDragged
+      
+    }//GEN-LAST:event_criarContaMouseDragged
+
+    private void criarConta1MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_criarConta1MouseDragged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_criarConta1MouseDragged
+
+    private void criarConta1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_criarConta1MouseClicked
+        JOptionPane.showMessageDialog(this, "oi");
+    }//GEN-LAST:event_criarConta1MouseClicked
 
     /**
      * @param args the command line arguments
@@ -192,6 +249,8 @@ public class bancoAutentica extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton btnCancela;
     public javax.swing.JButton btnLogin;
+    public javax.swing.JLabel criarConta;
+    public javax.swing.JLabel criarConta1;
     private javax.swing.JLabel jLabelLogin;
     private javax.swing.JLabel jLabelSenha;
     private javax.swing.JLabel jLabelusuario;

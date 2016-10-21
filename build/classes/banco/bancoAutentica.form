@@ -23,59 +23,72 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="1" attributes="0">
-              <EmptySpace min="-2" pref="397" max="-2" attributes="0"/>
-              <Component id="btnLogin" min="-2" pref="87" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
-              <Component id="btnCancela" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="400" max="32767" attributes="0"/>
-          </Group>
-          <Group type="102" alignment="1" attributes="0">
-              <EmptySpace min="-2" pref="343" max="-2" attributes="0"/>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="216" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jLabelusuario" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabelSenha" min="-2" max="-2" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Component id="jLabelusuario" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelSenha" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="txtSenha" min="-2" pref="228" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="btnLogin" min="-2" pref="87" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="btnCancela" min="-2" pref="87" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="txLogin" min="-2" pref="228" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace pref="98" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="criarConta" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="jLabelLogin" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="85" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="criarConta1" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="101" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                  </Group>
               </Group>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="txLogin" pref="228" max="32767" attributes="0"/>
-                  <Component id="txtSenha" max="32767" attributes="0"/>
-              </Group>
-              <EmptySpace max="32767" attributes="0"/>
-          </Group>
-          <Group type="102" alignment="1" attributes="0">
-              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-              <Component id="jLabelLogin" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="32767" attributes="0"/>
+              <EmptySpace pref="244" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="1" attributes="0">
-              <EmptySpace pref="196" max="32767" attributes="0"/>
+              <EmptySpace pref="200" max="32767" attributes="0"/>
               <Component id="jLabelLogin" min="-2" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
-                      <Component id="jLabelusuario" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" attributes="0">
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="txLogin" min="-2" pref="37" max="-2" attributes="0"/>
-                  </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="txLogin" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
+                  <Component id="jLabelusuario" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="txtSenha" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
                   <Component id="jLabelSenha" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtSenha" alignment="3" min="-2" pref="33" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="79" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="btnLogin" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="btnCancela" alignment="3" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="btnCancela" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnLogin" alignment="0" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="226" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="criarConta" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="criarConta1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -84,7 +97,7 @@
     <Component class="javax.swing.JLabel" name="jLabelLogin">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Dialog" size="18" style="0"/>
+          <Font name="Candara" size="24" style="0"/>
         </Property>
         <Property name="text" type="java.lang.String" value="LOGIN"/>
       </Properties>
@@ -132,6 +145,42 @@
     <Component class="javax.swing.JPasswordField" name="txtSenha">
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtSenhaActionPerformed"/>
+      </Events>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JLabel" name="criarConta">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Candara" size="14" style="0"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="0" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Criar Conta de Usuario"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseDragged" listener="java.awt.event.MouseMotionListener" parameters="java.awt.event.MouseEvent" handler="criarContaMouseDragged"/>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="criarContaMouseClicked"/>
+      </Events>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JLabel" name="criarConta1">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Candara" size="14" style="0"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="0" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Ajuda"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseDragged" listener="java.awt.event.MouseMotionListener" parameters="java.awt.event.MouseEvent" handler="criarConta1MouseDragged"/>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="criarConta1MouseClicked"/>
       </Events>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>

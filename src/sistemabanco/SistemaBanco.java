@@ -19,7 +19,7 @@ public class SistemaBanco {
             //instancia e cria objetos
 
             new banco.bancoAutentica().setVisible(true);
-       
+        
 
 }
 }

@@ -19,7 +19,7 @@ public class DataModel {
     public void createDataBase() throws ClassNotFoundException, SQLException {
         Db conexao = new Db();
 
-        pst = conexao.open().prepareStatement("CREATE DATABASE IF NOT EXISTS valter_banco DEFAULT CHARACTER SET utf8 ;\n"
+        pst = conexao.open().prepareStatement("CREATE DATABASE IF NOT EXISTS valter_banco DEFAULT CHARACTER SET utf8 \n"
                 + "DEFAULT COLLATE utf8_general_ci");
         pst.execute();
 

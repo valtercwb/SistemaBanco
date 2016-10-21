@@ -1,4 +1,4 @@
-package usuario;
+package modelDAO;
 
 import DataBase.Db;
 import java.sql.ResultSet;

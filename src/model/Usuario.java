@@ -1,4 +1,6 @@
-package usuario;
+package model;
+
+import modelDAO.UsuarioDAO;
 
 public class Usuario {
 
